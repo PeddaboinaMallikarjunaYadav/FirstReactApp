@@ -48,7 +48,7 @@ class App extends Component {
 
   render() {
     const {searchInput, userDetailsList} = this.state
-    const searchUsers = userDetailsList.filter((eachUser) => eachUser.name.includes(searchInput))
+    const searchUsers = userDetailsList.filter((eachUser) => eachUser.name.toLowerCase().includes(searchInput.toLowerCase()))
     return (
       <div className="app-container">
         <h1 className="title">Users List</h1>
@@ -65,4 +65,3 @@ class App extends Component {
 
 export default App
 
-//This is an update 
